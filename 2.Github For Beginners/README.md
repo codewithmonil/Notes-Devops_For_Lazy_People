@@ -1,78 +1,189 @@
-# Git Command Guide for Beginners
+# Every Github Command you Require!
 
 A comprehensive guide to essential Git commands for beginners.
 
----
+<br>
 
 ## Initial Setup
 
-### `echo "# Github-For-Beginners" >> README.md`
-Creates a README.md file with "# Github-For-Beginners" as content
+#### Creates a README.md file with "# Github-For-Beginners" as content
+```bash
+echo "# Github-For-Beginners" >> README.md
+```
 
-### `git init`
-Initializes a new Git repository in the current folder
+#### Initializes a new Git repository in the current folder
+```bash
+git init
+```
 
-### `git add .`
-Stages all files in the directory for commit
+#### Stages all files in the directory for commit
+```bash
+git add .
+```
 
-### `git branch -M main`
-Renames the current branch to "main"
+#### Renames the current branch to "main"
+```bash
+git branch -M main
+```
 
-### `git commit -m "first commit"`
-Commits staged files with message "first commit"
+#### Commits staged files with message "first commit"
+```bash
+git commit -m "first commit"
+```
 
-### `git remote add origin https://github.com/codewithmonil/Github-For-Beginners.git`
-Links local repository to remote GitHub repository
+#### Links local repository to remote GitHub repository
+```bash
+git remote add origin https://github.com/codewithmonil/Github-For-Beginners.git
+```
 
-### `git push -u origin main`
-Pushes main branch to remote and sets it as default upstream
+#### Pushes main branch to remote and sets it as default upstream
+```bash
+git push -u origin main
+```
+<br>
+<br>
 
----
+## Branches in Github
 
-## Working with Branches
+#### Shows current state of working directory and staged files
+```bash
+git status
+```
 
-### `git status`
-Shows current state of working directory and staged files
+#### Creates a new branch named "developer"
+```bash
+git branch -c developer
+```
 
-### `git branch -c developer`
-Creates a new branch named "developer"
+#### Lists all branches (local and remote)
+```bash
+git branch -a
+```
 
-### `git branch -a`
-Lists all branches (local and remote)
+#### Switches to the developer branch
+```bash
+git checkout developer
+```
 
-### `git checkout developer`
-Switches to the developer branch
+#### Stages all files in the directory for commit
+```bash
+git add .
+```
 
-### `git add .`
-Stages all files in the directory for commit
+#### Commits staged files with message "Developer commit"
+```bash
+git commit -m "Developer commit"
+```
 
-### `git commit -m "Developer commit"`
-Commits staged files with message "Developer commit"
+#### Pushes developer branch to remote repository
+```bash
+git push origin developer
+```
 
-### `git push origin developer`
-Pushes developer branch to remote repository
+#### Switches back to the main branch
+```bash
+git checkout main
+```
 
-### `git checkout main`
-Switches back to the main branch
+#### Merges changes from developer branch into main
+```bash
+git merge developer
+```
 
-### `git merge developer`
-Merges changes from developer branch into main
+<br>
+<br>
 
----
+
+
+
+## Everyone Makes Mistake! (How to resolve it?)
+
+#### Case-1: You want to rollback before any file is added or committed
+
+#### Add text to README, use git diff to see changes, then discard changes
+```bash
+# Add one line in README file manually, then:
+git diff
+```
+
+#### Discard changes in README.md
+```bash
+git checkout README.md (filename)
+```
+<br>
+
+#### Case-2: You want to rollback after a file is added or committed
+
+#### Shows commit history in compact one-line format
+```bash
+git logs --oneline
+```
+
+#### Moves HEAD to specified commit, keeps changes in working directory
+```bash
+git reset 2a744e3
+```
+
+#### Moves HEAD to specified commit and discards all changes
+```bash
+git reset --hard 2a744e3
+```
+
+<br>
+<br>
+
+## For Debugging
+
+#### Shows detailed commit history
+```bash
+git log
+```
+
+#### Shows history of HEAD movements (useful for recovery)
+```bash
+git reflog
+```
+<br>
+<br>
+
+## Syncing with Remote
+
+#### Fetches and merges changes from remote main branch
+```bash
+git pull origin main
+```
+#### Fetche changes from all branch
+```bash
+git pull --all
+```
+<br>
+<br>
+
+## Pull Requests
+
+#### Switch to developer branch, make changes,add feature,push, then create PR on GitHub
+
+
+<br>
+<br>
 
 ## Resolving Merge Conflicts
 
-### Why Merge Conflicts Arise
+#### Why Merge Conflicts Arise
 Merge conflicts occur when:
 - Two branches modify the same line in a file differently
 - One branch deletes a file while another branch modifies it
 - Multiple developers work on the same code simultaneously
 - Git cannot automatically determine which changes to keep
-
-### How to Resolve Merge Conflicts
+#### Tips to Avoid Conflicts
+- Pull latest changes before starting work
+- Communicate with team members
+- Make small, frequent commits
+- Work on different files when possible
+#### How to Resolve Merge Conflicts
 
 **Step 1: Identify the conflict**
-```
+```bash
 git status
 ```
 Shows files with conflicts marked as "both modified"
@@ -80,7 +191,7 @@ Shows files with conflicts marked as "both modified"
 **Step 2: Open the conflicted file**
 Look for conflict markers:
 ```
-<<<<<< HEAD
+<<<<<<< HEAD
 Your current branch changes
 =======
 Incoming branch changes
@@ -92,87 +203,18 @@ Incoming branch changes
 - Remove conflict markers (`<<<<<<<`, `=======`, `>>>>>>>`)
 - Combine changes from both branches if needed
 
-**Step 4: Mark as resolved**
+**Step 4: Mark as resolved then add,commit,push**
+
+<br>
+<br>
+
+## Forking and Open Source Contribution (The Ocean of Opportunity)
+
+#### Click Fork button on GitHub repository
+1. Go to the repository on GitHub
+2. Click the "Fork" button in the top-right corner
+3. Clone your forked repository to your VS code and ALL SET!:
+
+```bash
+git clone git@github.com:username/repository-name.git
 ```
-git add .
-```
-
-**Step 5: Complete the merge**
-```
-git commit -m "Resolved merge conflict"
-```
-
-**Step 6: Push changes**
-```
-git push origin main
-```
-
-### Tips to Avoid Conflicts
-- Pull latest changes before starting work
-- Communicate with team members
-- Make small, frequent commits
-- Work on different files when possible
-
----
-
-## Checking Changes
-
-### Add one line in readme and see git diff and then git checkout ./README.md
-Add text to README, use `git diff` to see changes, then `git checkout ./README.md` to discard changes
-
----
-
-## Commit History
-
-### `git logs --oneline`
-Shows commit history in compact one-line format
-
-### `git reset 2a744e3`
-Moves HEAD to specified commit, keeps changes in working directory
-
-### `git reset --hard 2a744e3`
-Moves HEAD to specified commit and discards all changes
-
----
-
-## For Debugging
-
-### `git log`
-Shows detailed commit history
-
-### `git reflog`
-Shows history of HEAD movements (useful for recovery)
-
----
-
-## Syncing with Remote
-
-### `git pull origin main`
-Fetches and merges changes from remote main branch
-
----
-
-## Pull Requests
-
-### Then make change in the developer branch and create a pull request
-Switch to developer, make changes, push, then create PR on GitHub
-
----
-
-## Forking
-
-### First fork a repo on GitHub then clone to the pc using
-Click Fork button on GitHub repository
-
-### `git clone git@github.com:username/repository-name.git`
-Downloads forked repository to your local machine
-
----
-
-## Contributing
-
-Feel free to contribute to this guide by creating a pull request!
-
-## License
-
-Open for educational purposes.
