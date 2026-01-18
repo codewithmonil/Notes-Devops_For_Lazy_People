@@ -40,6 +40,11 @@ git remote add origin https://github.com/codewithmonil/Github-For-Beginners.git
 ```bash
 git push -u origin main
 ```
+
+#### Shortcut to add and commit at once only (Condition: File should be Tracked once)
+```bash
+git commit -am "your message"
+```
 <br>
 <br>
 
