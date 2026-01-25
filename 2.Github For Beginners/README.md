@@ -223,3 +223,10 @@ Incoming branch changes
 ```bash
 git clone git@github.com:username/repository-name.git
 ```
+## For intial configuration
+```bash
+git config --global user.name "Monil"
+```
+```bash
+git config --global user.email "monil@email.com"
+```
