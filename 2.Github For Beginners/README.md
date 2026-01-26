@@ -121,7 +121,7 @@ git checkout README.md (filename)
 
 #### Shows commit history in compact one-line format
 ```bash
-git logs --oneline
+git log --oneline
 ```
 
 #### Moves HEAD to specified commit, keeps changes in working directory
