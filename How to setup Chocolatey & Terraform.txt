@@ -1,0 +1,39 @@
+How to setup Chocolatey:
+0. Open Powershell as admin
+
+1. Get-ExecutionPolicy
+
+2. Set-ExecutionPolicy AllSigned
+
+3. Install Chocolatey using this command (It's From the official documentation):
+
+Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))
+
+4. Check using command: "choco" after restarting powershell
+
+---------------------------------------------------------------
+
+How to setup Terraform using chocolatey?
+
+Very simple:
+
+Use command: choco install terraform -y
+
+And done !
+
+Check using : "terraform" command
+
+
+---------------------------------------------------------------
+
+How to install aws-cli using chocolatey?
+
+Very simple:
+
+Use command: choco install awscli -y
+
+And done !
+
+After restarting the powershell: Check using : "aws --version" command
+
+

@@ -1,0 +1,41 @@
+echo "# Github-For-Beginners" >> README.md
+git init
+ git add .
+git branch -M main
+git commit -m "first commit"
+git remote add origin https://github.com/codewithmonil/Github-For-Beginners.git
+git push -u origin main
+
+git status
+
+git branch -c developer
+ git branch -a
+
+git checkout developer
+git add .
+git commit -m "Developer commit"
+git push origin developer
+
+git checkout main
+git merge developer
+
+add one line in readme and see git diff and then git checkout ./README.md
+
+git logs --oneline
+git reset 2a744e3
+git reset --hard 2a744e3
+
+REsolve Conflicts too!
+for debugging:
+git log
+git reflog
+
+
+git pull origin main
+
+then make change in the developer branch and create a pull request
+
+for forking:
+first fork a repo on GitHub then clone to the pc using
+git clone git@github.com:username/repository-name.git
+

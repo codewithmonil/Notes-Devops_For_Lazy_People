@@ -1,0 +1,28 @@
+Enter email
+verify email
+
+Enter your aws username and password
+enter your personal detail
+
+Setup payment: Gpay and upi available. debit card also available 
+(15000 auto pay, don't worry, we will stay in the free tier)
+
+Verify yourself by giving pan card number and it's pdf
+
+Verify your phone number
+
+And all set ! Welcome to AWS, it is gonna be legendary!
+
+---------------------------------------------------------------------------
+
+
+How to connect your local pc to aws?
+
+Open your terminal and
+Write this command : aws configure
+
+Provide your access key,secret access key, region and output format
+Press enter and all set
+
+Your pc is connected to the aws account
+
