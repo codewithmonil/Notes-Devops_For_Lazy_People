@@ -133,6 +133,10 @@ rhel_server   | SUCCESS => { "ping": "pong" }
 vim setup_web.yml
 ```
 
+### To copy paste without and identation issue
+Open your file using vim setup_web.yml.
+Press Esc, type :set paste, and hit Enter
+
 ### Full Playbook
 ```yaml
 ---
