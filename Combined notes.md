@@ -1,23 +1,10 @@
-# DevOps Engineer Interview Field Guide
+# DevOps Engineer Field Guide
 
 **Linux • Bash • Python • Docker • Kubernetes • AWS • CI/CD**
 
-A practical, command-first reference for diagnosing incidents, writing small automation scripts, and explaining your reasoning during a fresher DevOps interview.
+A practical, command-first reference for diagnosing incidents, writing small automation scripts, and explaining your reasoning
 
 > **Primary goal:** Establish the symptom, gather evidence, form a hypothesis, make the smallest safe change, verify recovery, and document the result.
-
-## How to use this guide
-
-- Start with the quick triage checklist and Linux command map. Find the exact symptom before jumping to a fix.
-- Copy one code block at a time. Replace placeholders such as `SERVICE_NAME`, `POD_NAME`, `REGION`, and `INSTANCE_ID`.
-- Prefer read-only checks first. Restarting, deleting, scaling, changing permissions, or deploying are state-changing actions.
-- Use scripts on a test container or non-production host first. Many examples deliberately report findings instead of automatically killing processes or deleting files.
-
-## Repository fit
-
-This companion guide concentrates on operational debugging and beginner-friendly Bash/Python automation. It complements the existing Git/GitHub, Docker, GitHub Actions, Terraform, Ansible, and introductory AWS notes; it is not a replacement for CI/CD workflow notes.
-
-Existing notes: https://github.com/codewithmonil/Notes-Devops_For_Lazy_People
 
 ## Contents
 
